@@ -1,9 +1,6 @@
-using Elixor.Components;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
-namespace Elixor;
 
 public class Program
 {
@@ -29,7 +26,7 @@ public class Program
         app.UseStaticFiles();
         app.UseAntiforgery();
 
-        app.MapRazorComponents<App>()
+        app.MapRazorComponents<Elixor.Components.App>()
             .AddInteractiveServerRenderMode();
 
         app.Run();

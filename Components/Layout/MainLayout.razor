@@ -1,9 +1,23 @@
 ﻿@inherits LayoutComponentBase
 
+<header>
+	<h1> This is my header</h1>
+</header>
+
 @Body
+
+<footer>
+	@TrademarkMessage
+</footer>
 
 <div id="blazor-error-ui">
     An unhandled error has occurred.
     <a href="" class="reload">Reload</a>
     <a class="dismiss">🗙</a>
 </div>
+
+
+@code
+{
+	public string TrademarkMessage { get; set; } = "This is the official trademark message";
+}
